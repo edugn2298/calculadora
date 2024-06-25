@@ -8,15 +8,40 @@
 const text_area = document.querySelector('#datos');
 const valores = document.querySelector('.valores');
 const equal = document.querySelector('.igual');
+const divisor = document.querySelector('.entre');
+const multi = document.querySelector('.por');
+const subs = document.querySelector('.menos');
+const anadir = document.querySelector('.mas');
 let igual = false;
 let mas = false;
 let menos = false;
 let por = false;
 let entre = false;
 
-equalual.addEventListener('click', function(){
+equal.addEventListener('click', function(){
   igual = true;
 });
+
+divisor.addEventListener('click', function(){
+  entre = true;
+});
+
+multi.addEventListener('click', function(){
+  por = true;
+});
+
+subs.addEventListener('click', function(){
+  menos = true;
+});
+
+anadir.addEventListener('click', function(){
+  mas = true;
+});
+
+valores.addEventListener('click', function(){
+  text_area.textContent =  valores.textContent;
+});
+
 
 function calculadora(numero1,operador,numero2){
   if (operador == '+'){
@@ -37,20 +62,12 @@ function calculadora(numero1,operador,numero2){
 }
 
 
-
-
-valores.addEventListener('click', function(){
-  text_area.textContent =  valores.textContent;
-});
-
-
-
 function bucle(){
   console.log('Entrando a la funcion bucle');
   let operador = undefined;
   let numero1 = undefined;
   let numero2 = undefined;
-  while(igual == false){
+  if(igual == false){
     console.log('Entrando al bucle');
     if(mas == true){
       numero1 = text_area.textContent;
