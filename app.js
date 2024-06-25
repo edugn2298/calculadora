@@ -5,6 +5,19 @@
 
   opcional: Hacerle el modo claro y oscuro, y el responsive
 */
+const text_area = document.querySelector('#datos');
+const valores = document.querySelector('.valores');
+const equal = document.querySelector('.igual');
+let igual = false;
+let mas = false;
+let menos = false;
+let por = false;
+let entre = false;
+
+equalual.addEventListener('click', function(){
+  igual = true;
+});
+
 function calculadora(numero1,operador,numero2){
   if (operador == '+'){
     console.log(parseInt(numero1) + parseInt(numero2));
@@ -24,18 +37,13 @@ function calculadora(numero1,operador,numero2){
 }
 
 
-const text_area = document.querySelector('#datos');
-const valores = document.querySelector('.valores');
+
 
 valores.addEventListener('click', function(){
   text_area.textContent =  valores.textContent;
 });
 
-let igual = false;
-let mas = false;
-let menos = false;
-let por = false;
-let entre = false;
+
 
 function bucle(){
   console.log('Entrando a la funcion bucle');
